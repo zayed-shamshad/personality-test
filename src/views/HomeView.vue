@@ -10,6 +10,7 @@
     <button @click="$router.push('quiz')" class="quiz">
       Take the quiz !
     </button>
+    <img src="../assets/man thinking.svg" :height="300" >
     <!-- <div class="innerbox">
       <div class="inner"></div>
       <div class="inner"></div>
@@ -20,8 +21,8 @@
 </template>
 <style >
   .home {
-   width:95vw;
-   height:75vh;
+   width:100vw;
+   height:85vh;
    background-color:#05386B;
    display:flex;
    justify-content:center;
@@ -56,5 +57,9 @@
   margin: 10px;
   cursor: pointer;
   COLOR: #05386B;
+  transition: all 0.2s ease-in-out;
+}
+.quiz:hover{
+  transform:scale(1.1)
 }
 </style>

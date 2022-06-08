@@ -8,13 +8,15 @@
             </div> -->
 
     <div class="result">
-        <h1>
-            Result
-        </h1>
-        <h2>{{Object.values(result)[0]}}</h2>
-        <button @click="$router.push('/')" class="back">
-            Home
-        </button>
+        <div class="result-inner">
+            <h1>
+                Personality Type
+            </h1>
+            <h2>{{Object.values(result)[0]}}</h2>
+            <button @click="$router.push('/')" class="back">
+                Home
+            </button>
+        </div>
     </div>
 
 </template>
@@ -65,10 +67,11 @@ export default {
 <style>
 
 
+
 .back{
     background-color:#5CDB95;
     width:100px;
-    color:#05386B;
+    color:#EDF5E1;
     font-size:1.5rem;
     height:60px;
     border:none;
@@ -127,10 +130,10 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction:column;
-    width:200px;
-    height:50vh;
+    width:100%;
+    height:85vh;
     background-color: #05386B;
-    border-radius:5px;
+  
 }
 .result h1{
     color: #EDF5E1;
@@ -140,5 +143,12 @@ export default {
 .result h2{
     color: #EDF5E1;
     font-size: 30px;
+}
+.result-inner{
+    height:75vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
 }
 </style>
