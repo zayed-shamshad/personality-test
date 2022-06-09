@@ -24,23 +24,22 @@
 import axios from 'axios';
 export default {
     name: 'resullt-section',
-    props:["answers"],
+    props:["dataans"],
     data(){
         return{
             result:"",
         }
     },
-    beforeRouteLeave(to, from) {
-        const answer = window.confirm('Do you really want to leave? you have unsaved changes!')
-        if (!answer) return false
-    },
-
+    // beforeRouteLeave(to, from) {
+    //     const answer = window.confirm('Do you really want to leave? you have unsaved changes!')
+    //     if (!answer) return false
+    // },
     beforeRouteEnter(to,from,next){
-        var s=""
-        for (let i = 0; i < Object.values(to.params)[0].length;i++){
-           s+=Object.values(to.params)[0][i];
-        }
-        console.log(s);
+        // for (let i = 0; i < Object.values(to.params)[0].length;i++){
+        //    s+=Object.values(to.params)[0][i];
+        // }
+
+        var s=Object.values(to.params)[0];
         axios.get("https://personality-test-zayed.herokuapp.com/getPersonality/" + s)
             .then(res => {
         next(vm => {
@@ -49,7 +48,6 @@ export default {
         }).catch(err => {
                 console.log(err);
      })
-        
     },
      methods:{
         //  wave(){
@@ -66,8 +64,6 @@ export default {
 </script>
 <style>
 
-
-
 .back{
     background-color:#5CDB95;
     width:100px;
@@ -76,8 +72,13 @@ export default {
     height:60px;
     border:none;
     border-radius:5px;
+    transition:all 0.25s ease-in-out;
 }
-
+.back:hover{
+    background-color:#EDF5E1;
+    color:#05386B;
+    transform:scale(1.1);
+}
 .wave {
     background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
     width: 100vw;
@@ -150,5 +151,6 @@ export default {
     flex-direction:column;
     justify-content:space-evenly;
     align-items:center;
+    align-content: center;
 }
 </style>

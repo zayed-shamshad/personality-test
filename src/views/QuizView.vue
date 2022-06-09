@@ -1,10 +1,9 @@
 <template>
     <div class="quiz-section-box">
-        <!-- <button @click="back">go back
-
-        </button> -->
-        <KeepAlive>
-
+        <div class="progressbar">
+            <div class="bar"></div>
+        </div>
+        
             <transition>
                 <div v-if="slide==0">
                     <div v-for="(i,index) in ques1" :key="index">
@@ -75,7 +74,6 @@
                 </div>
             </transition>
 
-        </KeepAlive>
                 <button @click="submit" class="submit">{{buttonvalue}}</button>
     </div>
 </template>
@@ -84,7 +82,9 @@ export default {
     name: 'quiz-section',
     data(){
         return{
-            answers:[],
+            answers0:[],
+            answers1:[],
+            answers2:[],
             buttonvalue:"next",
             slide:0,
             ques1:[
@@ -165,26 +165,32 @@ export default {
         }
     },
     methods:{
-        back(){
-            if (this.slide ==1 || this.slide ==2){
-                if(this.slide ==2){
-                    this.buttonvalue="next";
-                }
-                this.slide--;
-            }
-            else{
-                return;
-            }
-            
-        },
+
         addclass1(i,index){
             
             if(document.getElementsByClassName('agree')[index].classList.contains('active')){
                 document.getElementsByClassName('agree')[index].classList.remove('active');
-                this.answers[index]="";
+                if (this.slide == 0) {
+                    this.answers0[index] = "";
+                }
+                else if (this.slide == 1) {
+                    this.answers1[index] = "";
+                }
+                else if (this.slide == 2) {
+                    this.answers2[index] = "";
+                }
             }
             else{
-                this.answers[index] = (i[0].a);
+                if (this.slide == 0) {
+                    this.answers0[index] = (i[0].a);
+                }
+                else if (this.slide == 1) {
+                    this.answers1[index] = (i[0].a);
+                }
+                else if (this.slide == 2) {
+                    this.answers2[index] = (i[0].a);
+                }
+
             document.getElementsByClassName("agree")[index].classList.add('active');
             document.getElementsByClassName("neutral")[index].classList.remove('active');
             document.getElementsByClassName("disagree")[index].classList.remove('active');
@@ -196,64 +202,102 @@ export default {
 
             if (document.getElementsByClassName('neutral')[index].classList.contains('active')) {
                 document.getElementsByClassName('neutral')[index].classList.remove('active');
-                this.answers[index] = "";
+                if(this.slide==0){
+                    this.answers0[index] = "";
+                }
+                else if(this.slide==1){
+                    this.answers1[index] = "";
+                }
+                else if(this.slide==2){
+                    this.answers2[index] = "";
+                }
+
+
             }
             else{
-            this.answers[index]=(i[0].b);
+                if(this.slide==0){
+                    this.answers0[index]=(i[0].b);
+                }
+                else if(this.slide==1){
+                    this.answers1[index]=(i[0].b);
+                }
+                else if(this.slide==2){
+                    this.answers2[index]=(i[0].b);
+                }
             document.getElementsByClassName("neutral")[index].classList.add('active');
             document.getElementsByClassName("agree")[index].classList.remove('active');
             document.getElementsByClassName("disagree")[index].classList.remove('active');
             }
-            // this.answers[index]=(this.options[index].b);
           
            
             },
         addclass3(i,index){
-
             if (document.getElementsByClassName('disagree')[index].classList.contains('active')) {
                 document.getElementsByClassName('disagree')[index].classList.remove('active');
-                this.answers[index] = null;
+                if (this.slide == 0) {
+                    this.answers0[index] = "";
+                }
+                else if (this.slide == 1) {
+                    this.answers1[index] = "";
+                }
+                else if (this.slide == 2) {
+                    this.answers2[index] = "";
+                }
             }
             else{
-            this.answers[index] = (i[0].c);
+                if (this.slide == 0) {
+                    this.answers0[index] = (i[0].c);
+                }
+                else if (this.slide == 1) {
+                    this.answers1[index] = (i[0].c);
+                }
+                else if (this.slide == 2) {
+                    this.answers2[index] = (i[0].c);
+                }
             document.getElementsByClassName("neutral")[index].classList.remove('active');
             document.getElementsByClassName("agree")[index].classList.remove('active');
             document.getElementsByClassName("disagree")[index].classList.add('active');
             }
-            //this.answers[index] = (this.options[index].c);
-            console.log(this.answers);
             },
         submit(){
+            window.scrollTo(0,0);
             if(this.slide<2){
                 if(this.slide==1){
                     this.buttonvalue="submit";
+                    document.getElementsByClassName('bar')[0].style.width = "27vw";
                     this.slide += 1;
                 }
                 else{
+                    document.getElementsByClassName('bar')[0].style.width= "13vw";
                     this.slide+=1;
                 }
                 return;
             }
             if(this.buttonvalue=="submit"){
-            console.log(this.answers);
-            
-            console.log(this.answers.length);
-           
-
-           
-            for(var j=0;j<this.answers.length;j++){
-                if(this.answers[j]===null || this.answers.length!==(this.ques3.length)){
-                    alert("please answer all questions");
-                    return;
+            document.getElementsByClassName('bar')[0].style.width = "40vw";
+            const answers= this.answers0.concat(this.answers1,this.answers2);
+            var dataans="";
+            for(var i=0;i<answers.length; i++){
+                if(answers[i]===""){
+                }
+                else{
+                    dataans+=answers[i]+" ";
                 }
             }
-            if(this.answers === [] || this.answers.length === 0 || this.answers === 'undefined' || this.answers.length==''){
-                alert("please answer all questions");
-                return;
-            }
-            else{
-                this.$router.push({ name: 'personality', params: { answers: this.answers } });
-            }
+            
+            // for(var j=0;j<this.answers.length;j++){
+            //     if(this.answers[j]===null || this.answers.length!==(this.ques3.length)){
+            //         alert("please answer all questions");
+            //         return;
+            //     }
+            // }
+            // if(this.answers0 === [] || this.answers.length === 0 || this.answers === 'undefined' || this.answers.length==''){
+            //     alert("please answer all questions");
+            //     return;
+            // }
+            // else{
+                this.$router.push({ name: 'personality', params: { dataans: dataans } });
+            // }
         }
         }
     }
@@ -262,6 +306,31 @@ export default {
 <style>
 
 
+
+
+.progressbar{
+    background-color: #ffc107;
+    width: 40vw;
+    height: 10px;
+    border-radius: 5px;
+    margin:10px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction: column;
+    padding: 3px;
+}
+.bar{
+    background-color: #060b6a;
+    width: 5px;
+    height: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 
 
 .questions{
@@ -338,7 +407,7 @@ export default {
     height: 30px;
 }
 .active {
-    background-image:linear-gradient(to right, rgb(255, 240, 240), rgb(0, 255, 217), rgb(255, 255, 0));
+    background-image:linear-gradient(to right, rgb(255, 240, 240), #5CDB95, rgb(108, 223, 229));
     background-position: left;
     background-size: 300%;
     display: flex;
@@ -350,9 +419,9 @@ export default {
     transition:all 0.5s ease-in-out;
     content: "T";
     position: absolute;
+    color:#05386B;
     padding:10px;
     font-size: 30px;
-    color: white;
     z-index:100;
 }
 .active:hover{

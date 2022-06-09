@@ -29,7 +29,7 @@ export default {
     <!-- </div> -->
 
     <footer class="footer">
-      Mohammed Zayed © 2020
+      Mohammed Zayed © 2022
     </footer>
 </template>
 
@@ -87,13 +87,13 @@ nav ul li a{
     text-decoration: none;
     color: #EDF5E1;
     font-size: 30px;
-    padding: 10px;
+    padding: 5px;
     transition: all 0.3s ease-in-out;
-    border-radius:5px;
+    border-radius:25px;
 }
 nav ul li a:hover{
+    color: #02203e;
     background-color: #EDF5E1;
-    color: #05386B;
 }
 
 .overlap{
