@@ -10,7 +10,7 @@
     <button @click="$router.push('quiz')" class="quiz">
       Take the quiz !
     </button>
-    <img src="../assets/man thinking.svg" :height="300" >
+    <img src="../assets/man_thinking.svg" :height="300" >
     <!-- <div class="innerbox">
       <div class="inner"></div>
       <div class="inner"></div>

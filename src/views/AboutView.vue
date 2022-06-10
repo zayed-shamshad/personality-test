@@ -28,6 +28,7 @@
   justify-content:center;
   align-items:center;
   flex-direction: column;
+  line-height: 50px;
 }
 
 </style>

@@ -86,10 +86,10 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: #EDF5E1;
-    font-size: 30px;
+    font-size: 25px;
     padding: 5px;
     transition: all 0.3s ease-in-out;
-    border-radius:25px;
+    border-radius:15px;
 }
 nav ul li a:hover{
     color: #02203e;

@@ -38,8 +38,9 @@ export default {
         // for (let i = 0; i < Object.values(to.params)[0].length;i++){
         //    s+=Object.values(to.params)[0][i];
         // }
-
-        var s=Object.values(to.params)[0];
+        var s="yo";
+        s=s+Object.values(to.params)[0];
+        
         axios.get("https://personality-test-zayed.herokuapp.com/getPersonality/" + s)
             .then(res => {
         next(vm => {
@@ -63,6 +64,21 @@ export default {
 }
 </script>
 <style>
+
+@media screen and (max-width: 800px) {
+ .result-inner{
+     width:80vw;
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+ }
+
+
+}
 
 .back{
     background-color:#5CDB95;

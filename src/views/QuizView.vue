@@ -305,9 +305,20 @@ export default {
 </script>
 <style>
 
+@media screen and (max-width: 800px) {
+   .questions{
+       font-size:0.65rem;
+        width:80vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       
+   }
+ 
 
-
-
+}
 .progressbar{
     background-color: #ffc107;
     width: 40vw;
@@ -339,6 +350,7 @@ html{
     justify-content:center;
     align-items:center;
     align-content: center;
+    flex-wrap: wrap;
 
 }
 
@@ -352,8 +364,6 @@ html{
     margin:0;
     width:100vw;
     align-content: center;
-   
-    
 }
 
 .submit{
