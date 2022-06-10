@@ -89,48 +89,48 @@ export default {
             slide:0,
             ques1:[
                 {
-                    question:" are u a good listener",
+                    question:"You are a good listener",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception" , b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her" ,c:"No. If you neglect them, your finances will always be burning on the back of every decision you mak"}],
                 },
                  {
-                    question:"are u a good orator",
+                    question:"You are a good orator",
                      options: [{ a:"I actually have that on my playlist! Hey ENFPs. I've posted this thread on the philosophy board too, but I am really curious to reading" ,b:"less introvert",c:"ambivert"}],
                     
                 },
                 {
-                    question: "are you a good communicator",
-                    options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception" , b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her" , c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
-                },
-                {
-                    question:"Seeing other people",
+                    question: "You usually stay calm, even under a lot of pressure.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception" , b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her" , c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
                     question:"You often make a backup plan for a backup plan.",
+                    options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception" , b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her" , c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
+                },
+                {
+                    question:"You are very sentimental.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception" , b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her" , c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
 
                 }
             ],
             ques2: [
                 {
-                    question: "hello",
+                    question: "You like to use organizing tools like schedules and lists.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "are u a good orator",
+                    question: "You are more inclined to follow your head than your heart.",
                     options: [{ a: "I actually have that on my playlist! Hey ENFPs. I've posted this thread on the philosophy board too, but I am really curious to reading", b: "less introvert", c: "ambivert" }],
 
                 },
                 {
-                    question: "are you a good communicator",
+                    question: "You enjoy participating in group activities",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "Seeing other people cry can .",
+                    question: "You are prone to worrying that things will take a turn for the worse.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "noice",
+                    question: "You avoid leadership roles in group settings.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
 
                 }
@@ -138,24 +138,24 @@ export default {
             ],
             ques3: [
                 {
-                    question: "slide =2",
+                    question: "You are definitely not an artistic type of person.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "are u a good orator",
+                    question: "You prefer to do your chores before allowing yourself to relax.",
                     options: [{ a: "I actually have that on my playlist! Hey ENFPs. I've posted this thread on the philosophy board too, but I am really curious to reading", b: "less introvert", c: "ambivert" }],
 
                 },
                 {
-                    question: "are you a good communicator",
+                    question: "You enjoy watching people argue.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "Seeing other people .",
+                    question: "You tend to avoid drawing attention to yourself.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
                 },
                 {
-                    question: "over.",
+                    question: "Your mood can change very quickly.",
                     options: [{ a: "I'm not sure, that's a good question. The distinction between the two is so dependant on perception", b: "One time my parents were fighting over my dad's affair and my dad pushed my mom. The fall broke her", c: "No. If you neglect them, your finances will always be burning on the back of every decision you mak" }],
 
                 }

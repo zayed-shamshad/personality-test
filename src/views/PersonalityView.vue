@@ -13,7 +13,7 @@
                 Personality Type
             </h1>
             <h2>{{Object.values(result)[0]}}</h2>
-            <button @click="$router.push('/')" class="back">
+            <button @click="backhome" class="back">
                 Home
             </button>
         </div>
@@ -51,6 +51,10 @@ export default {
      })
     },
      methods:{
+        backhome(){
+            this.$router.push('/');
+             document.getElementsByClassName('bar')[0].style.width = "40vw";
+        }
         //  wave(){
         //  const k = document.getElementsByClassName('wave-inner');
         //  for (let i = 0; i < k.length; i++) {

@@ -5,32 +5,32 @@ export default {
 </script>
 
 <template>
-  
-    <nav>
-      <ul>
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-        <li>
-          <router-link to="/">Contact</router-link>
-        </li>
-      </ul>
-    </nav>
 
-    <!-- <div class="overlap"> -->
-    <router-view v-slot="{ Component }">
-      <Transition>
-        <component :is="Component" />
-      </Transition>
-    </router-view>
-    <!-- </div> -->
+  <nav>
+    <ul>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <a href="https://zayed-shamshad.github.io/portfolio-zs/#/" target="blank">Contact-me</a>
+      </li>
+    </ul>
+  </nav>
 
-    <footer class="footer">
-      Mohammed Zayed © 2022
-    </footer>
+  <!-- <div class="overlap"> -->
+  <router-view v-slot="{ Component }">
+    <Transition>
+      <component :is="Component" />
+    </Transition>
+  </router-view>
+  <!-- </div> -->
+
+  <footer class="footer">
+    Mohammed Zayed © 2022
+  </footer>
 </template>
 
 <style>
